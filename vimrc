@@ -6,6 +6,10 @@ set nocompatible
 filetype off
 call pathogen#infect()
 
+let &rtp.=','.resolve(expand('~/.vim/vim/bundle/powerline/powerline/bindings/vim'))
+
+set clipboard=unnamed
+
 " All nice indent options
 set autoindent
 set cindent
@@ -336,10 +340,10 @@ let g:Powerline_stl_path_style = "filename"
 let g:Powerline_symbols = "fancy"
 let g:Powerline_theme  =  "default"
 
-call Pl#Theme#RemoveSegment('fileformat')
+"call Pl#Theme#RemoveSegment('fileformat')
 "call Pl#Theme#RemoveSegment('fileencoding')
 "call Pl#Theme#RemoveSegment('filetype')
-call Pl#Theme#RemoveSegment('lineinfo')
+"call Pl#Theme#RemoveSegment('lineinfo')
 
 "
 " Find merge diffs
